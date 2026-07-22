@@ -123,6 +123,7 @@ cp "$PROJECT/opening/literature/reading_list.md"                      raw/invent
 echo "[3/5] 论文 → raw/papers/"
 for f in "$PROJECT"/opening/literature/reading_notes/*.md; do
     [ -e "$f" ] || continue
+    basename "$f" | grep -q '^tpl-' && continue  # 跳过模板文件
     cp "$f" "raw/papers/$(basename "$f")" 2>/dev/null || true
 done
 for f in "$PROJECT"/opening/literature/reference/*.pdf; do

@@ -2,11 +2,11 @@
 
 整理日期：2026-07-15
 
-> **2026-07-17 口径更新**：本文中的"计划层/运行层/服务端层""三层策略""RC3/研究内容三"等旧术语已统一为当前口径。最新研究内容定义（两项策略 + 多模态泛化验证 + 算子代价估计补充）、优先级和边界以 `AGENTS.md` §1、`PROJECT_OUTLINE.md` 和 [[知识总图]] 为准。写回已降为实验设置。本文保留原始设计推演过程作为历史参考，术语不匹配处以上述主文档为准。
+> **2026-07-17 口径更新**：本文中的"计划层/运行层/服务端层""三层策略""RC3/研究内容三"等旧术语已统一为当前口径。最新研究内容定义（两项策略 + 多模态泛化验证 + 算子代价估计补充）、优先级和边界以 `AGENTS.md` §1、`PROJECT_OUTLINE.md` 和 `research/knowledge_hub.md` 为准。写回已降为实验设置。本文保留原始设计推演过程作为历史参考，术语不匹配处以上述主文档为准。
 
 用途：在绘制策略设计图、撰写开题报告方法部分和设计正式实验前，先明确“哪些优化思想可以借鉴、哪些只适合作为边界或 baseline、本文自己的策略到底是什么”。
 
-本文件是策略口径源，不替代具体实验计划。具体变量、运行矩阵和结果记录仍以 [[data-organization-batching]]、[[service-scheduling-backpressure]]、[[sink-writeback-coordination]] 和 [[baseline-reference]] 为准。
+本文件是策略口径源，不替代具体实验计划。具体变量、运行矩阵和结果记录仍以 `data_organization_batching.md`、`service_scheduling_backpressure.md`、`sink_writeback_coordination.md` 和 `baseline_reference.md` 为准。
 
 ---
 
@@ -242,7 +242,7 @@ Devil's Advocate 最强反驳：
 
 ## 7. 当前推荐策略版本
 
-实现与实验矩阵参考见 [[strategy-implementation-reference]]。本文件负责回答“为什么这些策略有文献依据、哪些不能过度声称”；实现参考文件负责回答“每层有哪些信号、变量、baseline 和指标”。
+实现与实验矩阵参考见 `strategy_design_implementation_reference.md`。本文件负责回答“为什么这些策略有文献依据、哪些不能过度声称”；实现参考文件负责回答“每层有哪些信号、变量、baseline 和指标”。
 
 ### 7.1 重新评判结论：从 static plan-time 到 dynamic upstream batching（2026-07-16 更新）
 

@@ -66,5 +66,5 @@ tags:
 
 ## 相关笔记
 
-- [[inventory]] — 完整文献清单
+- [[ai_operator_literature_inventory]] — 完整文献清单
 - [[文献地图]] — 文献全景地图

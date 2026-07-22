@@ -134,7 +134,7 @@ Galois (SIGMOD '25)
 
 ### 3.3 参考文献更新
 
-从 23 条扩展到 40 条（详见 [[inventory]]）：
+从 23 条扩展到 40 条（详见 `opening/literature/ai_operator_literature_inventory.md`）：
 - 新增 17 条外部文献（15 篇 CCF-A + 顶会论文，2 篇 arXiv）
 - 标注 15 篇精读（均为 CCF-A 或顶会）
 - 新增文献覆盖：SIGMOD 2026/2025/2024, VLDB 2024/2025, VLDB Journal 2025, ICDE 2024, SOSP 2023, OSDI 2022/2024, CIDR 2025
@@ -152,9 +152,9 @@ Galois (SIGMOD '25)
 
 ## 五、下一步行动
 
-1. ✅ 文献清单 → [[inventory]]
+1. ✅ 文献清单 → `opening/literature/ai_operator_literature_inventory.md`
 2. ✅ 精读笔记 → `opening/literature/reading_notes/`
 3. ⬜ 更新开题报告 §2 国内外研究现状
 4. ⬜ 更新开题报告参考文献（23→40 条）
-5. ⬜ 更新 [[reading-list]] 关联新文献
+5. ⬜ 更新 `opening/literature/reading_list.md` 关联新文献
 6. ⬜ 用户审阅后，同步飞书

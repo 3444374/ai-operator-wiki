@@ -30,7 +30,7 @@
 已新增补充调研文件：
 
 ```text
-gpu-scheduler-supplement
+opening/literature/gpu_scheduler_data_placement_supplement_20260715.md
 ```
 
 该文件用于回答策略控制器设计从哪些前沿系统思想中来，重点覆盖：

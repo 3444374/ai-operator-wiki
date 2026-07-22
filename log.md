@@ -4,37 +4,57 @@ type: log
 
 # 操作日志
 
-记录知识库的所有 ingest、lint、query 操作和结构变更。
-
 ---
+
+## 2026-07-22 19:00：重构为项目镜像架构
+
+**变更**：raw/ 和 experiments/plans/ 改为项目原始文件的纯镜像。所有文件不再在 wiki 中独立维护——唯一来源是项目仓库。新增 `sync-wiki.sh` 一键同步脚本。
+
+**机制**：`rm -rf` 目标目录 + `cp` 重新拷贝 = 新增、修改、删除全部同步。
 
 ## 2026-07-22：初始化知识库
 
 - **操作**：从项目 `ai-operator-execution-optimization` 导入核心知识文件
-- **来源**：`research/`（7 文件）+ `opening/literature/`（7 文件）+ `experiments/plans/`（9 文件）
-- **结构**：重构为 Karpathy 三层架构（raw/ → wiki/ → log.md）
-- **插件**：配置 obsidian-llm-wiki（green-dalii）
-- **Git**：初始化为独立仓库
+- **来源**：`research/` + `opening/literature/` + `experiments/plans/`
+- **结构**：Karpathy 三层架构（raw/ → wiki/ → log.md）
+- **Git**：独立仓库，与项目平级
+
+---
 
 ## 同步协议
 
-项目 → 知识库同步规则：
+```
+项目（知识唯一来源）                    Wiki（编译查询界面）
+══════════════════════                 ═════════════════════
+research/*.md                          raw/references/*
+opening/literature/*.md   ──sync.sh──→ raw/inventory/*, raw/analysis/*, raw/papers/*
+experiments/plans/*.md                 experiments/plans/*
 
-| 项目变更 | 知识库操作 |
+                                          ↓ 插件 ingest
+                                         wiki/entities/ + wiki/concepts/
+```
+
+| 你在项目中的操作 | 如何同步到知识库 |
 |---|---|
-| 精读完新论文，写了笔记 | 存到 `raw/papers/` → Ingest |
-| 完成新实验，有了结论 | 写结论笔记到 `raw/findings/` → Ingest |
-| 做了设计决策 | 直接写入 `my-notes/设计决策日志.md` |
-| 修改了已有知识文件 | 覆盖 `raw/` 对应文件 → Re-ingest |
-| 代码、CSV、规则文件变更 | 不需要同步 |
+| 修改了已有知识文件 | 运行 `./sync-wiki.sh` → 插件 re-ingest |
+| 新增了一篇论文笔记 | 文件已在 `opening/literature/reading_notes/` → `./sync-wiki.sh` 自动发现新文件 |
+| 新建了一个知识目录（如 `research/新方向/`） | 在 `sync-wiki.sh` 中加一行 `cp` 映射 |
+| 删除了一个过时的知识点 | `./sync-wiki.sh`（`rm -rf` + 重拷 = 自动删除） |
+| 写代码、跑实验、改规则 | 不需要同步 |
 
-项目文件（`research/`、`opening/literature/`、`experiments/plans/`）保留在原位（Claude Code 需要读取），知识库是编译后的增强视图。
+**核心原则**：raw/ 永远是项目文件的镜像。每次同步先清空再拷贝，所以新增、修改、删除全部自动处理。
+
+**新目录映射**：如果在项目中新建了知识目录（如 `research/my_new_topic/`），在 `sync-wiki.sh` 对应区块加一行：
+```bash
+cp "$PROJECT/research/my_new_topic/"*.md raw/references/
+```
+
+---
 
 ## 待执行
 
-- [ ] 安装 obsidian-llm-wiki 插件
+- [ ] 在 GitHub 创建 private repo → `git remote add` → `git push`
+- [ ] 安装 obsidian-llm-wiki 插件（Settings → Community Plugins → Karpathy LLM Wiki）
 - [ ] 配置 LLM provider（DeepSeek / Anthropic）
-- [ ] 首次 Ingest：`raw/papers/` 三篇精读笔记
-- [ ] 首次 Ingest：`raw/references/` 四篇技术参考
-- [ ] 运行 Lint 建立健康基线
-- [ ] Git push 到 GitHub
+- [ ] 首次 Ingest：`raw/papers/` → 测试插件是否正常
+- [ ] 其他电脑：`git clone` 两个仓库（确保放在同一父目录下）

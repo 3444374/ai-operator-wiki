@@ -2,9 +2,9 @@
 
 整理日期：2026-07-16
 对应研究内容：研究内容一
-方法候选编号：A1.1-A1.6（详见 [[research-design-catalog]] §3，已归档）
+方法候选编号：A1.1-A1.6（详见 `archive/research_design_catalog.md` §3，已归档）
 
-> **2026-07-16 方向更新**：主场景从 AI_EMBED 转向 AI_COMPLETE（生成式 LLM 推理）。具体优化方法尚未锁定——动态 batching（token-budget / length-align / prefix-aware grouping）是当前重点探索方向，但静态 batch_size 参数穷举的结果仍作为 baseline 对照保留。以下内容中的实验骨架和参数矩阵为候选方案，最终消融设计将在 vLLM baseline 建立后根据实际数据确定。详细背景见 [[知识总图]]。
+> **2026-07-16 方向更新**：主场景从 AI_EMBED 转向 AI_COMPLETE（生成式 LLM 推理）。具体优化方法尚未锁定——动态 batching（token-budget / length-align / prefix-aware grouping）是当前重点探索方向，但静态 batch_size 参数穷举的结果仍作为 baseline 对照保留。以下内容中的实验骨架和参数矩阵为候选方案，最终消融设计将在 vLLM baseline 建立后根据实际数据确定。详细背景见 `research/knowledge_hub.md`。
 
 ---
 
@@ -165,7 +165,7 @@ prompt_tokens = len(tokenizer.encode(prompt, add_special_tokens=False))
 文档落点规则：
 
 - token 获取、字段定义、分组公式、超长行处理写在本文件。
-- 代码模块、抽象接口、CSV 字段和实现边界写在 [[strategy-implementation-reference]]。
+- 代码模块、抽象接口、CSV 字段和实现边界写在 `strategy_design_implementation_reference.md`。
 - 具体实验命令、CSV 路径、结果解释写在对应 `experiments/results/.../README.md`。
 
 ---

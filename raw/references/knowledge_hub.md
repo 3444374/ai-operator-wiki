@@ -1,14 +1,3 @@
----
-type: moc
-tags:
-  - moc
-  - knowledge-hub
-created: 2026-07-16
-updated: 2026-07-22
-obsidian_import_date: 2026-07-22
-reviewed: true
----
-
 # 知识库总汇：数据库 AI 负载的上游执行链路优化
 
 生成日期：2026-07-16（2026-07-17 更新：新增 §10 Daft+Ray 多模态与具身智能）
@@ -42,7 +31,7 @@ reviewed: true
 
 ## 1. vLLM 机制详解
 
-**详细手册**：[[vllm_continuous_batching_reference]]
+**详细手册**：`research/vllm_continuous_batching_reference.md`
 
 ### 1.1 Continuous Batching 调度循环
 
@@ -81,7 +70,7 @@ reviewed: true
 
 ### 1.4 Chunked Prefill 与上游策略的安全边界
 
-**详细论述**：[[data_organization_batching]] §2.5.7；vLLM deep-research 验证报告（2026-07-20）。
+**详细论述**：`experiments/plans/data_organization_batching.md` §2.5.7；vLLM deep-research 验证报告（2026-07-20）。
 
 **核心区分**（事实，来源：vLLM 官方文档 + SOSP'23 论文）：
 
@@ -103,7 +92,7 @@ reviewed: true
 
 ### 1.5 分组策略设计空间：Length-Align vs Bin-Packing
 
-**详细论述**：[[data_organization_batching]] §2.5。
+**详细论述**：`experiments/plans/data_organization_batching.md` §2.5。
 
 两种 token-budget 驱动的分组策略（操作在"如何选择行放入同一 batch"，而非"如何切割行内文本"）：
 
@@ -112,13 +101,13 @@ reviewed: true
 | **A: Length-Align** | 相似 token 长度的行分入同一 batch | 长 batch 内无短 decode 可交错 → chunked prefill 优势减弱 |
 | **B: Bin-Packing** | 混合不同长度，使每个 batch 总 token 量均衡 | 天然混合 prefill+decode → chunked prefill 最优场景 |
 
-推荐主推 B（Bin-Packing），A 保留为消融对比（尤其在异构 actor pool 场景下）。详见 [[data_organization_batching]] §2.5.6。
+推荐主推 B（Bin-Packing），A 保留为消融对比（尤其在异构 actor pool 场景下）。详见 `data_organization_batching.md` §2.5.6。
 
 ---
 
 ## 2. Ray 架构设计空间
 
-**详细手册**：[[ray_actor_dynamic_batching_reference]]
+**详细手册**：`research/ray_actor_dynamic_batching_reference.md`
 
 ### 2.1 Ray Core Actor 模式
 
@@ -159,7 +148,7 @@ class AdaptiveSubmitActor:
 
 ## 3. 文献全景地图
 
-涵盖 57 篇论文 + 产业系统，分为四个研究岛。完整清单见 [[ai_operator_literature_inventory]]。
+涵盖 57 篇论文 + 产业系统，分为四个研究岛。完整清单见 `opening/literature/ai_operator_literature_inventory.md`。
 
 ### 3.1 岛一：数据库 AI 算子与 DB4AI
 
@@ -227,7 +216,7 @@ class AdaptiveSubmitActor:
 | **Arrow DataFusion** | SIGMOD 2024 | Arrow-native 查询引擎 |
 | **Arrow Flight** | arXiv 2022 | 高性能列式数据传输 |
 
-**Ray 调度思想到策略变量的映射**（来自 [[gpu_scheduler_data_placement_supplement_20260715]]）：
+**Ray 调度思想到策略变量的映射**（来自 `opening/literature/gpu_scheduler_data_placement_supplement_20260715.md`）：
 
 | Ray 机制 | 可迁移策略 | 不可过度声称 |
 |---|---|---|
@@ -367,7 +356,7 @@ LEADS (VLDB '24)             DistServe (OSDI '24)         Milvus (SIGMOD '21)
 
 ### 5.5 从 2025 年 LLM Serving 新文献提取（2026-07-21 新增）
 
-以下 6 篇 2025-2026 年论文为项目文献搜索发现的新增来源，与 RC1（数据组织）和 RC2（提交控制）直接相关。详细内容见 [[ray_actor_dynamic_batching_reference]] §6.7-§6.12。
+以下 6 篇 2025-2026 年论文为项目文献搜索发现的新增来源，与 RC1（数据组织）和 RC2（提交控制）直接相关。详细内容见 `research/ray_actor_dynamic_batching_reference.md` §6.7-§6.12。
 
 **从 CONCUR (2025) 提取**：
 - **AIMD 可迁移到 request 级**：CONCUR 控制的是"活跃 agent 数"（粗粒度），我们可以把 AIMD 用到更细的 per-actor in-flight 请求数控制
@@ -396,7 +385,7 @@ LEADS (VLDB '24)             DistServe (OSDI '24)         Milvus (SIGMOD '21)
 
 ### 5.6 Ray 现存机制的能力边界（2026-07-21 新增）
 
-经过对 Ray Core/Data/Serve 各层机制的详细审查，确认以下边界（详见 [[ray_actor_dynamic_batching_reference]] §3.7）：
+经过对 Ray Core/Data/Serve 各层机制的详细审查，确认以下边界（详见 `research/ray_actor_dynamic_batching_reference.md` §3.7）：
 
 **Ray 提供的 building blocks（可直接使用）**：
 | 机制 | 类型 | 适用性 |
@@ -440,7 +429,7 @@ LEADS (VLDB '24)             DistServe (OSDI '24)         Milvus (SIGMOD '21)
 
 ## 7. 策略设计与实验路线
 
-**主文件**：[[strategy_design_literature_basis]]（策略口径）、[[strategy_design_implementation_reference]]（实现拆解）
+**主文件**：`experiments/plans/strategy_design_literature_basis.md`（策略口径）、`experiments/plans/strategy_design_implementation_reference.md`（实现拆解）
 
 ### 7.1 当前策略版本
 
@@ -508,42 +497,42 @@ Ray Actor 去中心化自适应提交
 ## 9. 文件清单
 
 **2026-07-21 更新**：
-- [[ray_actor_dynamic_batching_reference]] — 新增 §1.6-§1.8（Ray Serve 准入控制与队列自适应）、§3.7 大幅扩展（7 种反压机制详述 + ConcurrencyCap 废弃分析）、§6.7-§6.12（6 篇 2025-2026 新论文）
-- [[知识总图]] — 新增 §5.5（6 篇新论文设计原则提取）、§5.6（Ray 现存机制能力边界）、§8 知识缺口更新
+- `research/ray_actor_dynamic_batching_reference.md` — 新增 §1.6-§1.8（Ray Serve 准入控制与队列自适应）、§3.7 大幅扩展（7 种反压机制详述 + ConcurrencyCap 废弃分析）、§6.7-§6.12（6 篇 2025-2026 新论文）
+- `research/knowledge_hub.md` — 新增 §5.5（6 篇新论文设计原则提取）、§5.6（Ray 现存机制能力边界）、§8 知识缺口更新
 
 **2026-07-17 新增**：
-- [[知识总图]] — 本文件，新增 §10
-- [[daft_ray_multimodal_reference]] — Daft+Ray 多模态技术手册与具身智能连接分析
+- `research/knowledge_hub.md` — 本文件，新增 §10
+- `research/daft_ray_multimodal_reference.md` — Daft+Ray 多模态技术手册与具身智能连接分析
 
 **2026-07-16 新增**：
-- [[知识总图]] — 本文件
-- [[vllm_continuous_batching_reference]] — vLLM 技术手册
-- [[ray_actor_dynamic_batching_reference]] — Ray 架构模式手册
-- [[inference_pipeline_interaction_literature]] — 28 篇推理管线文献综述
+- `research/knowledge_hub.md` — 本文件
+- `research/vllm_continuous_batching_reference.md` — vLLM 技术手册
+- `research/ray_actor_dynamic_batching_reference.md` — Ray 架构模式手册
+- `research/inference_pipeline_interaction_literature.md` — 28 篇推理管线文献综述
 
 **已有文献与设计文件**：
-- [[literature_and_evidence_review]] — Ray/Daft/Lance/Snowflake 综合证据
-- [[existing_ai_operator_execution_chains]] — 现有 AI 算子执行链路对比
-- [[ai_operator_literature_inventory]] — 57 篇 CCF-A 文献清单
-- [[gpu_scheduler_data_placement_supplement_20260715]] — GPU 调度补充调研 + Ray 思想映射
-- [[direction_assessment_20260715]] — 方向评估 + 三岛模型 + 不能声称的结论
-- [[reading_list]] — 精读/泛读文献清单
+- `research/literature_and_evidence_review.md` — Ray/Daft/Lance/Snowflake 综合证据
+- `research/existing_ai_operator_execution_chains.md` — 现有 AI 算子执行链路对比
+- `opening/literature/ai_operator_literature_inventory.md` — 57 篇 CCF-A 文献清单
+- `opening/literature/gpu_scheduler_data_placement_supplement_20260715.md` — GPU 调度补充调研 + Ray 思想映射
+- `opening/literature/direction_assessment_20260715.md` — 方向评估 + 三岛模型 + 不能声称的结论
+- `opening/literature/reading_list.md` — 精读/泛读文献清单
 
 **实验计划文件**：
-- [[strategy_design_literature_basis]] — 策略口径与文献依据
-- [[strategy_design_implementation_reference]] — 实现细节与模块拆解
-- [[research_design_catalog]] — 方案目录与评分（已归档，设计历史参考）
-- [[baseline_reference]] — Baseline 矩阵
-- [[data_organization_batching]] — 研究内容一实验计划
-- [[service_scheduling_backpressure]] — 研究内容二实验计划
-- [[sink_writeback_coordination]] — 写回验证
-- [[cross_layer_killer_experiment]] — 耦合验证
+- `experiments/plans/strategy_design_literature_basis.md` — 策略口径与文献依据
+- `experiments/plans/strategy_design_implementation_reference.md` — 实现细节与模块拆解
+- `experiments/plans/archive/research_design_catalog.md` — 方案目录与评分（已归档，设计历史参考）
+- `experiments/plans/baseline_reference.md` — Baseline 矩阵
+- `experiments/plans/data_organization_batching.md` — 研究内容一实验计划
+- `experiments/plans/service_scheduling_backpressure.md` — 研究内容二实验计划
+- `experiments/plans/sink_writeback_coordination.md` — 写回验证
+- `experiments/plans/cross_layer_killer_experiment.md` — 耦合验证
 
 ---
 
 ## 10. Daft+Ray 多模态执行引擎与具身智能负载
 
-**详细手册**：[[daft_ray_multimodal_reference]]
+**详细手册**：`research/daft_ray_multimodal_reference.md`
 
 ### 10.1 Daft 引擎核心架构
 
@@ -674,7 +663,7 @@ K_max 动态控制               shuffle_algorithm
 actor pool 分池路由          morsel size（间接）
 ```
 
-**论文中完整的优化实验清单**（详见 [[strategy_design_implementation_reference]] §4.7）：
+**论文中完整的优化实验清单**（详见 `experiments/plans/strategy_design_implementation_reference.md` §4.7）：
 
 | 优先级 | 实验 | 变量 | 回答的问题 |
 |---|---|---|---|

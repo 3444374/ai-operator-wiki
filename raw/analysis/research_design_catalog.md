@@ -2,9 +2,9 @@
 
 生成日期：2026-07-15
 
-> **2026-07-17 口径更新**：本文中的"三层策略""RC3"等旧术语已统一。最新研究内容定义（两项策略 + 多模态泛化验证 + 算子代价估计补充）和优先级以 `AGENTS.md` §1、`PROJECT_OUTLINE.md` 和 [[知识总图]] 为准。本文保留原始方案评估矩阵作为设计历史参考。
+> **2026-07-17 口径更新**：本文中的"三层策略""RC3"等旧术语已统一。最新研究内容定义（两项策略 + 多模态泛化验证 + 算子代价估计补充）和优先级以 `AGENTS.md` §1、`PROJECT_OUTLINE.md` 和 `research/knowledge_hub.md` 为准。本文保留原始方案评估矩阵作为设计历史参考。
 用途：为三个研究内容和跨层协同优化提供可供选择的方案目录，支撑后续实验设计和代码实现决策
-方法：基于 57 篇文献（[[inventory]]）和 2026 年 7 月前沿检索，结合 idea-evaluator 五维评分、deep-research 证据纪律和 vibe-research-workflow 工程可行性约束
+方法：基于 57 篇文献（`opening/literature/ai_operator_literature_inventory.md`）和 2026 年 7 月前沿检索，结合 idea-evaluator 五维评分、deep-research 证据纪律和 vibe-research-workflow 工程可行性约束
 
 ---
 
@@ -1202,7 +1202,7 @@ Phase 4（~ 4 周，2026-10）
 
 ## 9. Killer Experiment 矩阵
 
-对应 [[baseline-reference]] §五，核验**独立最优 vs 联合最优**：
+对应 `experiments/plans/baseline_reference.md` §五，核验**独立最优 vs 联合最优**：
 
 | 编号 | 组名 | 研究内容一 策略 | 研究内容二 策略 | 研究内容三 策略 | 来源 | 代表什么 |
 |---|---|---|---|---|---|---|
@@ -1245,7 +1245,7 @@ Phase 4（~ 4 周，2026-10）
 
 ## 10. Baseline 设计考量
 
-本节为每个候选方案指定对应的 baseline 策略，确保实验对照不为 strawman。所有 baseline 来源标注到 [[baseline-reference]] 中的编号。
+本节为每个候选方案指定对应的 baseline 策略，确保实验对照不为 strawman。所有 baseline 来源标注到 `baseline_reference.md` 中的编号。
 
 ### 10.1 Baseline 设计原则
 

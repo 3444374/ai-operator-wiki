@@ -46,7 +46,7 @@ tags:
 
 ## Baseline
 
-从 [[baseline-reference]] 中选择：
+从 [[baseline_reference]] 中选择：
 
 | 级别 | Baseline | 配置 |
 |---|---|---|
@@ -95,5 +95,5 @@ tags:
 ## 相关笔记
 
 - [[实验设计]] — 实验设计总览
-- [[baseline-reference]] — Baseline 矩阵
+- [[baseline_reference]] — Baseline 矩阵
 - [[设计方法论]] — 文献优先设计原则

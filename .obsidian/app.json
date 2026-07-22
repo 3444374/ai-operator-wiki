@@ -1,0 +1,17 @@
+{
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "attachments",
+  "alwaysUpdateLinks": true,
+  "showFrontmatter": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": false,
+  "tabSize": 4,
+  "useTab": false,
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "communityPluginSortOrder": "download",
+  "showInlineTitle": true
+}

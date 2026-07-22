@@ -1,0 +1,11 @@
+{
+  "promptDelete": false,
+  "showUnsupportedFiles": false,
+  "trashOption": "local",
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "attachments",
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [],
+  "readableLineLength": true
+}

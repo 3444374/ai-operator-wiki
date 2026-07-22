@@ -1,0 +1,19 @@
+# Obsidian
+.obsidian/workspace*.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/*.json.bak
+
+# Raw papers (large PDFs — keep local, not in git)
+raw/papers/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*~

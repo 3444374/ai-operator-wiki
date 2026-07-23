@@ -24,14 +24,14 @@ generation_complete: true
 - [[concepts/semantic-join-rewrite|语义 Join 重写]]
 - [[concepts/ai-sql-operators|AI SQL 算子]]
 - [[concepts/ml-as-udf|ML 用户定义函数]]
-- [[concepts/原生-sql-算子集成|原生-sql-算子集成]]
+- [[concepts/原生-sql-算子集成|原生 SQL 算子集成]]
 - [[concepts/查询计划|查询计划]]
-- [[concepts/db4ai|db4ai]]
+- [[concepts/db4ai|DB4AI]]
 
 ## 相关实体
+- [[entities/gaussml|GaussML 系统]]
 - [[entities/cortex-aisql|Cortex AISQL]]
 - [[entities/snowflake|Snowflake]]
-- [[entities/gaussml|GaussML 系统]]
 - [[entities/opengauss|openGauss]]
 
 ## 关键特征

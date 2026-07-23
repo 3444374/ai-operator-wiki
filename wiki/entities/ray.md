@@ -24,7 +24,10 @@ generation_complete: true
 ## 描述
 Ray 是一个分布式计算框架，常用于构建数据密集型应用。本课题曾考虑使用 Ray 作为外部执行链路的基础，但 [[entities/cortex-aisql|Cortex AISQL]] 论文并未涉及该框架，而 [[entities/snowflake|snowflake]] 使用自研执行引擎。Ray 提供统一的编程模型，支持从单机扩展到大规模集群，广泛应用于强化学习、数据处理和模型服务等场景。
 
+与 GaussML 依赖 openGauss 自身架构的分布式并行不同，Ray 的分布式能力解耦于特定数据库，更易于集成外部执行器。本课题即采用 Ray actor 管理 GPU 推理进程，天然支持新模型接入，体现出架构弹性上的优势。
+
 ## 来源提及
 
 - "Cortex AISQL 的 AI 算子在 Snowflake 内部执行；不研究“数据库触发后经由外部 worker/Ray/GPU 服务再写回”的路径" (Cortex AISQL 的 AI 算子在 Snowflake 内部执行；不研究“数据库触发后经由外部 worker/Ray/GPU 服务再写回”的路径。) — [[raw/papers/cortex_aisql_sigmod2026|cortex_aisql_sigmod2026]]
 - "| ML 算子位置 | 查询引擎内部 | 外部 Ray worker + GPU 模型服务 |" (| ML 算子位置 | 查询引擎内部 | 外部 Ray worker + GPU 模型服务 |) — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]
+- "分布式并行依赖 openGauss 自身架构，无法轻松迁移到 Ray/Spark 等外部框架" — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]

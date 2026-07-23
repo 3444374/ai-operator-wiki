@@ -2,52 +2,46 @@
 type: source
 created: 2026-07-22
 updated: 2026-07-22
-source_file: "[[raw/papers/gaussml_icde2024.md]]"
-tags: [document]
-aliases: ["GaussML 精读笔记", "GaussML ICDE 2024 路线对照分析"]
-contentHash: 533-8f417842
+tags:
+  - "document"
+aliases:
+  - "GaussML 论文精读笔记"
+  - "GaussML (ICDE 2024) 深度阅读"
+  - "GaussML (ICDE 2024)"
 generation_complete: true
 ---
 
-# 精读笔记：GaussML (ICDE 2024) + 对照路线分析 - 摘要
+
+# 精读笔记：GaussML (ICDE 2024) - Summary
 
 ## 来源
-- 原始文件：[[raw/papers/gaussml_icde2024.md]]
-- 收录日期：2026-07-22
+- Original file: `[[raw/papers/gaussml_icde2024.md]]`
+- Ingested: 2026-07-22
 
 ## 核心内容
-本页为 CCF‑A 会议论文《GaussML: An End‑to‑End In‑database Machine Learning System》的精读笔记，同时结合作者自身课题对两条架构路线进行对照分析。[[entities/gaussml|GaussML]] 是华为与清华大学联合提出的数据库内机器学习系统，在 [[entities/opengauss|openGauss]] 中将 20 余种 ML 算法直接实现为 [[concepts/原生sql算子集成|原生 SQL 算子]]，代替传统的 [[concepts/ml-as-udf|ML‑as‑UDF]] 方案，并引入 [[concepts/ml感知优化器|ML 感知优化器]] 与 [[concepts/simd|SIMD]]/[[concepts/数据预取|数据预取]] 加速，使得典型 ML 任务比 [[entities/apache-madlib|Apache MADlib]] 快 2–6 倍。GaussML 代表 [[concepts/db4ai|DB4AI]]（模型进数据库）路线，降低数据移动但资源受限于数据库进程。笔记同时记录了本课题所采取的 [[concepts/外部执行链路|外部执行链路]]（数据库触发 → [[entities/ray|Ray]] [[concepts/gpu-模型服务|GPU 模型服务]] → 写回），该路线能给 embedding 与 LLM 推理弹性提供 GPU 算力，但却引入 [[concepts/写回瓶颈|写回瓶颈]]。两条路线并非相互替代，而是针对不同模型类型与资源场景的互补设计。
+本笔记是对华为与清华大学在 ICDE 2024 发表的系统论文 **GaussML** 的深度解读。[[entities/gaussml|GaussML]] 在 [[entities/opengauss|openGauss]] 数据库内核中实现了 20 余种常用 ML 算法的原生 SQL 算子集成，替代传统的[[concepts/ml-as-udf|ML-as-UDF]]方案，从而消除 UDF 带来的安全漏洞与性能瓶颈。系统引入了[[concepts/ml-感知优化器|ML 感知优化器]]，配合[[concepts/simd-加速|SIMD 加速]]和[[concepts/数据预取|数据预取]]技术，在分类、回归、聚类等任务上比 [[entities/apache-madlib|Apache MADlib]] 快 2–6 倍。然而，该工作仍属于[[concepts/db4ai|DB4AI]]内嵌路线，仅覆盖传统机器学习，无法支持 LLM/embedding 类新型算子。笔记从四层进行剖析，对比了 [[entities/cortex-aisql|Cortex AISQL]]、[[entities/smart|Smart]]、[[entities/galois|Galois]] 和 [[entities/neurdb|NeurDB]] 等后续工作，指出 GaussML 的架构局限恰好反衬出本课题[[concepts/外部执行链路|外部执行链路]]的弹性与拓展优势，成为 DB4AI 方向的重要学术基线参照。
 
 ## 关键实体
-- [[entities/gaussml|gaussml]]
-- [[entities/icde-2024|icde-2024]]
-- [[entities/opengauss|opengauss]]
-- [[entities/apache-madlib|apache-madlib]]
-- [[entities/华为|华为]]
-- [[entities/清华大学|清华大学]]
-- [[entities/ray|ray]]
-- [[entities/lance|lance]]
-- [[entities/pgvector|pgvector]]
-- [[entities/psycopg|psycopg]]
+- [[entities/gaussml|GaussML]] — 数据库内机器学习系统
+- [[entities/opengauss|openGauss]] — 华为开源数据库
+- [[entities/apache-madlib|Apache MADlib]] — 传统 ML-in-database 基线
+- [[entities/华为|华为]]、[[entities/清华大学|清华大学]] — 研发单位
+- [[entities/icde-2024|ICDE 2024]] — 发表会议
+- [[entities/cortex-aisql|Cortex AISQL]]、[[entities/smart|Smart]]、[[entities/galois|Galois]]、[[entities/neurdb|NeurDB]] — 同期 DB4AI 工作对比
+- [[entities/ray|Ray]] — 外部执行框架对比
 
 ## 关键概念
-- [[concepts/ml-as-udf|ml-as-udf]]
-- [[concepts/原生sql算子集成|原生sql算子集成]]
-- [[concepts/ml感知优化器|ml感知优化器]]
-- [[concepts/simd|simd]]
-- [[concepts/数据预取|数据预取]]
-- [[concepts/db4ai|db4ai]]
-- [[concepts/外部执行链路|外部执行链路]]
-- [[concepts/写回瓶颈|写回瓶颈]]
-- [[concepts/数据库触发|数据库触发]]
-- [[concepts/查询计划|查询计划]]
-- [[concepts/传统-ml|传统-ml]]
-- [[concepts/arrow-recordbatch|arrow-recordbatch]]
-- [[concepts/gpu-模型服务|gpu-模型服务]]
+- [[concepts/ml-as-udf|ML-as-UDF]] — 传统数据库内 ML 实现方式
+- [[concepts/原生-sql-算子集成|原生 SQL 算子集成]] — GaussML 的核心方法论
+- [[concepts/ml-感知优化器|ML 感知优化器]] — ML 感知的查询优化
+- [[concepts/simd-加速|SIMD 加速]]、[[concepts/数据预取|数据预取]] — 硬件级性能优化
+- [[concepts/db4ai|DB4AI]] — 数据库内人工智能研究领域
+- [[concepts/查询计划|查询计划]] — 优化器生成 ML 混合查询计划
+- [[concepts/外部执行链路|外部执行链路]] — 本课题的差异化路线
 
 ## 要点
-- GaussML 将 20+ ML 算子作为原生 SQL 算子集成进 openGauss，替代 UDF 方案。
-- ML 感知优化器与 SIMD/数据预取技术显著提升性能，比 MADlib 快 2–6 倍。
-- DB4AI 架构减少数据移动但受限于数据库进程资源。
-- 本课题采用外部执行链路（数据库触发 → Ray GPU 服务 → 写回），可弹性利用 GPU 但引入写回开销。
-- 两条路线不是替代关系，适用于传统 ML 与 LLM/embedding 等不同场景。
+- GaussML 以原生 SQL 算子替代 UDF，实现端到端数据库内 ML，比 MADlib 快 2–6 倍。
+- ML 感知优化器突破 UDF 黑盒限制，使查询计划能够感知 ML 算子的代价与语义。
+- 系统绑定于 openGauss，分布式能力无法轻松迁移至 Ray 等外部框架。
+- 仅覆盖传统 ML 算法，不及 LLM/embedding 场景，其硬编码架构扩展性有限。
+- 该论文为 DB4AI 内嵌路线的典型代表，其代际局限恰恰论证了面向大模型时代的数据库-AI 融合需要新的外部执行架构。

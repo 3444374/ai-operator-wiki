@@ -2,14 +2,16 @@
 type: entity
 created: 2026-07-22
 updated: 2026-07-22
-sources: ["[[sources/cortex_aisql_sigmod2026_c18b08]]"]
-tags: [product]
+sources:
+  - "[[sources/cortex_aisql_sigmod2026_c18b08]]"
+  - "[[sources/gaussml_icde2024_577060]]"
+tags:
+  - "product"
 aliases:
   - "Smart Rewriting System"
   - "VLDB 2025 Smart"
 generation_complete: true
 ---
-
 
 # Smart
 
@@ -27,3 +29,4 @@ Smart 是发表于 VLDB 2025 的一个推理重写系统，专注于对数据库
 ## 来源提及
 
 - "比 Smart（VLDB 2025）多了产业生产数据，少了算法深度（Smart 的推理重写比 Cortex 的代价模型更精细）。" (比 Smart（VLDB 2025）多了产业生产数据，少了算法深度（Smart 的推理重写比 Cortex 的代价模型更精细）。) — [[raw/papers/cortex_aisql_sigmod2026|cortex_aisql_sigmod2026]]
+- "比 **Smart**（VLDB 2025）多了数据库内训练能力，少了查询优化深度（Smart 的推理重写更精细）" — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]

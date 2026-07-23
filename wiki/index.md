@@ -7,6 +7,56 @@
 
 ## 实体
 
+- [[entities/pvldb-2024|pvldb-2024]] `aliases: Proceedings of the VLDB Endowment Volume 17 2024, PVLDB Vol. 17` - PVLDB 2024 是数据库领域顶级期刊《Proceedings of the VLDB Endowment》(PVLDB) 的第 17 卷,覆盖 2023–2024 年度发表的高质量研究成果,被中
+- [[entities/hits|hits]] `aliases: Hits 数据集, 歌曲流行度数据集` - Hits 是一个用于二分类预测的公共数据集，包含约 143,000 首歌曲的特征，目标是判断一首歌是否会成为热门。在 [[entities/inferdb|InferDB]] 的精度与存储压缩实验中，
+- [[entities/rice|rice]] `aliases: Rice 数据集, 大米品种分类数据集` - Rice 是一个多分类数据集，包含约 75k 张大米颗粒图像，任务为区分 5 个不同品种。该数据集在 [[entities/inferdb|InferDB]] 实验中代表具有适度复杂特征但类别数较小的
+- [[entities/pollution|pollution]] `aliases: Pollution 数据集, 污染数据集, Pollution dataset` - Pollution 是一个大规模回归任务数据集，包含约 1.06 亿条记录，用于评估[[concepts/prediction-table|Prediction Table]]与有监督离散化方法在超大
+- [[entities/fraud|fraud]] `aliases: Fraud 数据集, 信用卡欺诈数据集, Credit Card Fraud Dataset` - Fraud 是一个用于信用卡欺诈检测的二分类数据集，包含约 284k 条交易记录。该数据集被用于评估 [[entities/inferdb|InferDB]] 在小规模分类任务上的推理延迟与精度，实验
+- [[entities/postgresql|postgresql]] `aliases: Postgres, PG, PostgreSQL 数据库` - PostgreSQL 是一款功能丰富的开源关系型数据库管理系统，以其对 SQL 标准的严格遵循、出色的扩展能力以及可编程性著称。[[entities/inferdb|InferDB]] 选择 Post
+- [[entities/lightgbm|lightgbm]] `aliases: Light Gradient Boosting Machine, Light GBM` - LightGBM 是由微软提出并开源的高效梯度提升框架，采用基于直方图的决策树算法（Histogram Algorithm）和叶子优先（Leaf-wise）的树生长策略，相比传统 GBDT 在训练速度
+- [[entities/xgboost|xgboost]] `aliases: XGBoost, eXtreme Gradient Boosting` - XGBoost (eXtreme Gradient Boosting) 是一种基于梯度提升决策树的集成学习算法，因其高性能和准确性在结构化数据的回归与分类任务中占据主导地位。在 InferDB 的评估
+- [[entities/scikit-learn|scikit-learn]] `aliases: scikit-learn, sklearn` - Scikit-learn 是 Python 生态中广泛使用的开源机器学习库，提供分类、回归、聚类等经典算法和统一 API，并内置丰富的数据预处理与模型评估工具。该库以一致、简洁的设计著称，常作为独立 
+- [[entities/university-of-illinois-chicago|university-of-illinois-chicago]] `aliases: UIC, 伊利诺伊大学芝加哥分校` - 伊利诺伊大学芝加哥分校（University of Illinois Chicago，简称 UIC）是一所位于美国伊利诺伊州芝加哥市的公立研究型大学。在 PVLDB 2024 的 [[entities
+- [[entities/university-of-potsdam|university-of-potsdam]] `aliases: University of Potsdam, 波茨坦大学, UP` - 波茨坦大学是德国勃兰登堡州的一所公立大学，以计算机科学和数据工程见长。在[[entities/inferdb|InferDB]] 原型系统的研究中，数据库领域知名学者 [[entities/tilma
+- [[entities/nyc-rides|nyc-rides]] `aliases: NYC 行程数据集, NYC Rides, NYC-rides dataset` - NYC-rides 是一个包含约 150 万条记录的纽约市行程数据集，在 [[entities/inferdb|InferDB]] 实验中被用作回归任务的主要性能基准之一。实验表明，借助 InferD
+- [[entities/postgresml|postgresml]] `aliases: PGML, PostgresML 2.0` - PostgresML 2.0 是一个将 Scikit‑learn 机器学习模型原生集成到 PostgreSQL 数据库中的工具，属于将 ML runtime 直接嵌入 DBMS 的技术路线。在 [[e
+- [[entities/digitsmnist|digitsmnist]] `aliases: MNIST, 手写数字数据集, Digits MNIST` - Digits/MNIST 是一个经典的手写数字识别数据集，包含 70,000 张 28×28 像素的灰度图像，均匀覆盖 0‑9 共 10 个数字类别。该数据集以 784 像素的高维稀疏特征著称，广泛用
+- [[entities/tilmann-rabl|tilmann-rabl]] `aliases: Rabl, Tilmann Rabl` - Tilmann Rabl 是一位计算机科学家，同时隶属于 University of Potsdam 和 [[entities/hasso-plattner-institute|Hasso Platt
+- [[entities/hasso-plattner-institute|hasso-plattner-institute]] `aliases: HPI, 哈索·普拉特纳研究所, Hasso Plattner Institute` - Hasso Plattner Institute（简称 HPI）是位于德国波茨坦的计算机科学研究机构，专注于信息技术与系统工程领域，尤其在数据库和信息系统方向具有国际影响力。该机构是 [[entiti
+- [[entities/optbinning|optbinning]] `aliases: OptBinning 框架, OptBinning library` - OptBinning 是一个用于有监督离散化的 Python 开源库，在 [[entities/inferdb|InferDB]] 中作为有监督离散化步骤的核心依赖。它基于 [[concepts/in
+- [[entities/inferdb|inferdb]] `aliases: InferDB 系统, InferDB 原型, hpides/inferdb` - - [[entities/ricardo-salazar-díaz|Ricardo Salazar-Díaz]]
+- [[entities/boris-glavic|boris-glavic]] `aliases: Glavic, B. Glavic` - Boris Glavic 是芝加哥伊利诺伊大学 (University of Illinois Chicago) 的研究人员，主要研究方向为数据库系统与近似查询处理。他是 InferDB 项目的共同作
+- [[entities/ricardo-salazar-díaz|ricardo-salazar-díaz]] `aliases: Salazar-Díaz, Ricardo Salazar` - Ricardo Salazar-Díaz 是 [[entities/inferdb|InferDB]] 论文的第一作者，来自 [[entities/hasso-plattner-institute|H
+- [[entities/fortune-dataset|fortune-dataset]] `aliases: Fortune 数据集, Fortune Dataset, Fortune Data` - Fortune dataset 是 [[entities/palimpzest|Palimpzest]] 与 Galois 对比实验中使用的数据资源，重点应用于模型提供置信度（ [[concepts/
+- [[entities/lotus|lotus]] `aliases: LOTUS semantic query system, Patel et al. 2024 LOTUS` - LOTUS 是一个由 Patel 等人于 2024 年提出的语义查询系统，旨在对半结构化和非结构化数据提供类似 SQL 的查询能力。该系统通过大型语言模型（LLMs）增强语义解析，使传统 SQL 能够
+- [[entities/tag|tag]] `aliases: TAG, TAG system, Text2SQL is Not Enough` - TAG是由Biswal等人于2024年提出的系统，其核心主张是“Text2SQL is Not Enough”——仅依赖自然语言到SQL的转换无法完全满足从大语言模型（LLMs）中提取结构化数据的复杂
+- [[entities/movies-dataset|movies-dataset]] `aliases: Movies, Movies Dataset, MC Movies` - Movies 数据集是 Galois 实验中用于 MC（模型提供的上下文知识）场景的数据集，属于 [[concepts/rag-scenario|RAG scenario]] 设置，即查询相关的文本片
+- [[entities/premier-dataset|premier-dataset]] `aliases: Premier League数据集, 英超数据集, Premier dataset` - Premier dataset 是[[entities/palimpzest|Palimpzest]]系统中针对[[concepts/model-provided-confidence|Model-p
+- [[entities/presidents-dataset|presidents-dataset]] `aliases: Presidents 数据集, Presidents Dataset` - Presidents 是 [[entities/palimpzest|Palimpzest]] 在 Galois 实验中用于评估 [[concepts/model-provided-confidenc
+- [[entities/scholar-dataset|scholar-dataset]] `aliases: Scholar数据集, Scholar Dataset, Scholar` - Scholar 数据集是一个用于内部知识（IK）场景的学术领域数据集，包含论文、作者、会议等结构化信息。在 Galois 系统的实验中，该数据集被用于评估大语言模型（LLM）在学术领域知识提取方面的准
+- [[entities/flight|flight]] `aliases: Flight 数据集, Flight dataset` - Flight 是 [[moc/实验设计|Galois 实验]]中使用的一个小型结构化数据集，专门服务于[[concepts/internal-knowledge|内部知识（IK）]]场景。该数据集旨在
+- [[entities/world-dataset|world-dataset]] `aliases: World 数据集, World Data Set, World Dataset` - World 是 Galois 实验中用于 [[concepts/internal-knowledge|Internal knowledge (IK)]] 场景的数据集之一，包含地理相关的结构化数据（如
+- [[entities/geo-test|geo-test]] `aliases: Geo-Test Dataset, Geo-Test 数据集` - Geo-Test 是 [[entities/galois|Galois]] 论文中专门用于校准置信度阈值 τ 的数据集。该数据集包含结构化地理知识，其核心作用是帮助系统在不同数据分布下确定 Key-S
+- [[entities/palimpzest|palimpzest]] `aliases: Palimpzest, Palimpzest 系统` - Palimpzest 是一个面向检索增强生成（RAG）场景的语义查询系统，能够通过声明式接口将自然语言查询转换为高效的数据库操作。在 Galois 系统的实验评估中，Palimpzest 被用作对比基
+- [[entities/sigmod-2025|sigmod-2025]] `aliases: SIGMOD/PODS 2025, ACM SIGMOD 2025, SIGMOD '25` - SIGMOD 2025 是 ACM SIGMOD/PODS 国际数据管理会议，于 2025 年召开，为数据库领域的顶级学术会议（CCF-A 类）。该会议汇集了全球数据管理、存储与检索系统的前沿研究，其
+- [[entities/llama-3-1-70b|llama-3-1-70b]] `aliases: Llama 3.1 70B, LLaMA 3.1-70B` - LLaMA 3.1 70B 是 Meta 发布的大规模语言模型，属于 LLaMA 3.1 系列中的 70B 参数版本。在 [[entities/galois|Galois]] 的实验设计中，该模型通过
+- [[entities/gpt-4o-mini|gpt-4o-mini]] `aliases: GPT-4o mini API, OpenAI GPT-4o mini, GPT-4o Mini` - GPT-4o mini 是 OpenAI 推出的轻量级大语言模型（LLM）API，旨在以更低的推理成本提供高质量的语言理解与生成能力。在 [[sources/galois_sigmod2025_c4a
+- [[entities/together-ai|together-ai]] `aliases: Together AI, Together AI API, Together AI 推理 API` - Together AI 是一家提供大语言模型推理 API 的公司，在 [[sources/galois_sigmod2025_c4af88|Galois 实验]] 中作为 LLM 后端之一被使用。通过
+- [[entities/university-of-basilicata|university-of-basilicata]] `aliases: 巴斯利卡塔大学, Università degli Studi della Basilicata, UNIBAS` - University of Basilicata（巴斯利卡塔大学）是一所位于意大利波坦察的研究型大学。该大学是 [[entities/galois|Galois]] 项目的主要研究机构之一，多位核心作
+- [[entities/eurecom|eurecom]] `aliases: EURECOM - Telecom ParisTech, École d'ingénieurs EURECOM, EURECOM Sophia Antipolis` - EURECOM 是一所位于法国索菲亚·安蒂波利斯的通信与计算机科学工程学校，专注于通信系统、数据科学与网络安全领域的研究与教育。它是 SIGMOD 2025 论文中 [[entities/galois
+- [[entities/sift1m|sift1m]] `aliases: SIFT1M dataset, SIFT1M 数据集` - SIFT1M 是一个公开的标准图像特征向量数据集，包含一百万个 128 维 SIFT 描述符向量。它是近似近邻搜索（ANN）领域的经典 benchmark 之一，许多图索引和量化方法均在其上报告结果。
+- [[entities/neurips-2019|neurips-2019]] `aliases: Neural Information Processing Systems 2019, NeurIPS '19, Annual Conference on Neural Information Processing Systems 2019` - NeurIPS 2019 是第33届神经信息处理系统年度会议，是机器学习与人工智能领域的顶级会议。会议收录了 [[entities/diskann|DiskANN]] 论文，该工作由 [[entiti
+- [[entities/vbase|vbase]] `aliases: VBASE (OSDI 2023), VBASE unified query system` - VBASE 是发表于 OSDI 2023 的统一查询系统，旨在原生地在向量数据与关系数据之间进行混合查询。它引入了 unification selectivity 感知的优化策略，能够根据过滤条件的选
+- [[entities/microsoft-research-india|microsoft-research-india]] `aliases: MSR India` - Microsoft Research India 是微软研究院在印度的分支实验室，也是 [[entities/diskann|DiskANN]] 论文的作者所属机构。该实验室在大型信息系统、算法与系统
+- [[entities/turbovecdb|turbovecdb]] `aliases: TurboVecDB (PVLDB 2025), TurboVecDB` - TurboVecDB 是发表于 [[entities/pvldb-2025|PVLDB 2025]] 的向量索引构建优化系统，专门针对 [[entities/pgvector|pgvector]] 的
+- [[entities/wisckey|wisckey]] `aliases: WiscKey (FAST 2016), WiscKey KV store` - WiscKey 是一种基于 [[concepts/key-value-separation|Key-Value Separation]] 的持久化存储引擎，由 FAST 2016 学术会议提出。其核心
+- [[entities/milvus|milvus]] `aliases: Milvus vector database, Milvus (SIGMOD 2021)` - Milvus 是一个面向 AI 应用的开源向量数据库，在 SIGMOD 2021 论文中介绍了其 CPU/GPU 混合查询引擎设计。DiskANN 笔记将其列为与纯 CPU 路线对照的后续待读文献。M
+- [[entities/sptag|sptag]] `aliases: Space Partition Tree and Graph, Microsoft SPTAG` - SPTAG（Space Partition Tree and Graph）是微软 Bing 团队在 KDD 2018 上提出的向量近似最近邻搜索库，采用树与图混合索引结构，面向大规模高维向量检索场景。
+- [[entities/faiss|faiss]] `aliases: Facebook AI Similarity Search, Faiss library, FAISS 库` - FAISS（Facebook AI Similarity Search）是 Meta（前 Facebook）AI Research 开源的高性能向量相似度搜索库。它支持多种索引策略，如 IVF、IMI
+- [[entities/nmslib|nmslib]] `aliases: Non-Metric Space Library` - NMSLib 是一个高效的非度量空间相似度搜索库，实现了多种图索引算法，包括 [[concepts/hnsw|HNSW]] 和 SW‑graph 等。在 [[entities/diskann|disk
+- [[entities/diskann|diskann]] `aliases: DiskANN (NeurIPS 2019), Vamana-based search engine, 磁盘近似最近邻` - DiskANN 是一个针对十亿级向量近邻搜索的高性能系统，由 Suhas Jayaram Subramanya 等人在 NeurIPS 2019 提出并开源为 C++ 实现（GitHub: micro
+- [[entities/sift1b|sift1b]] `aliases: SIFT1B dataset` - SIFT1B 是一个广泛使用的标准大规模向量检索基准数据集，包含 10 亿个 128 维的 SIFT 描述向量，采用 L2 距离度量。该数据集代表了十亿级规模的静态图像特征匹配场景，是评估 ANN 索
+- [[entities/deep1b|deep1b]] `aliases: DEEP1B dataset, Deep1B` - DEEP1B 是一个十亿级向量检索基准数据集，包含 10 亿个 96 维深度神经网络特征，使用余弦距离度量。在 [[entities/diskann|DiskANN]] 的实验中，基于 [[conce
 - [[entities/is-the-gpu-half-empty-or-half-full|is-the-gpu-half-empty-or-half-full]] `aliases: Kossmann et al. 2025 LLM scheduling, GPU half-empty or half-full` - “Is the GPU half-empty or half-full?” 是 Kossmann 等人于 2025 年发表的关于大语言模型（LLM）推理调度的实用技术论文。该工作聚焦于通过更精确的 [
 - [[entities/bytetransformer|bytetransformer]] `aliases: ByteTransformer 推理框架` - ByteTransformer 是一个面向大语言模型推理的优化框架，其核心技术是针对不规则（ragged）张量的“重打包”（repacking）策略。该技术通过重新排列可变长度的序列来最大化 GPU 
 - [[entities/turbotransformers|turbotransformers]] `aliases: TurboTransformers 推理框架, TurboTransformers` - TurboTransformers 是一个面向大语言模型（LLM）的推理框架，在本文中被引用为 batch formation 策略的早期代表性工作。其核心设计思路是通过最小化 tensor spar
@@ -19,8 +69,8 @@
 - [[entities/james-pan|james-pan]] `aliases: James Pan, Pan J, J. Pan` - James Pan 是 [[entities/清华大学|清华大学]] 计算机科学与技术系的研究人员，与 [[entities/guoliang-li|Guoliang Li]] 密切合作，共同在 [[
 - [[entities/guoliang-li|guoliang-li]] `aliases: 李国良, Li G` - Guoliang Li（李国良）是[[entities/清华大学|清华大学]]计算机系教授，长期深耕数据库系统与数据科学领域。他的研究工作聚焦于多模态数据管理、AI 与数据库的深度融合，相关成果多次发
 - [[entities/smart|smart]] `aliases: Smart Rewriting System, VLDB 2025 Smart` - Smart 是发表于 VLDB 2025 的一个推理重写系统，专注于对数据库中的 AI 算子进行显式重写与代价优化。与 [[entities/cortex-aisql|Cortex AISQL]] 相
-- [[entities/清华大学|清华大学]] `aliases: Tsinghua University, 清华` - 清华大学是中国顶尖的研究型大学，在数据库与机器学习的交叉领域进行了前沿探索。该校作为 [[entities/gaussml|GaussML]] 系统的合作单位，提供了核心的学术研究力量——论文作者中包
-- [[entities/华为|华为]] `aliases: Huawei, 华为技术有限公司` - 华为技术有限公司是中国领先的 ICT 基础设施和智能终端提供商，也是 GaussML 论文的合作单位之一。该论文由 [[entities/清华大学|清华大学]] 与华为共同完成，体现了华为在数据库与 
+- [[entities/清华大学|清华大学]] `aliases: Tsinghua University, 清华` - - [[entities/华为|华为]]
+- [[entities/华为|华为]] `aliases: Huawei, 华为技术有限公司` - *引用标注：[[gaussml_icde2024_577060]] 为 GaussML 论文的本地源文件，具体出处见该源页面。
 - [[entities/vllm|vllm]] `aliases: vLLM, Efficient LLM Serving System` - - [[entities/sglang|SGLang]]
 - [[entities/snowflake|snowflake]] `aliases: Snowflake Inc., Snowflake Computing` - - [[entities/cortex-aisql|Cortex AISQL]]
 - [[entities/sigmod-2026|sigmod-2026]] `aliases: ACM SIGMOD Conference 2026, ACM SIGMOD 2026` - SIGMOD 2026（ACM SIGMOD Conference 2026）是数据库领域最高水平的国际学术会议，被中国计算机学会（CCF）推荐为A类会议。该会议聚焦数据管理、数据库系统与前沿应用，是
@@ -39,10 +89,10 @@
 - [[entities/lance|lance]] `aliases: Lance` - Lance 是一种列式存储格式，专门针对多模态数据（例如图像、视频）进行了优化。在 [[entities/cortex-aisql|Cortex AISQL]] 论文中，Lance 被提及为外部执行技
 - [[entities/icde-2024|icde-2024]] `aliases: ICDE '24, International Conference on Data Engineering 2024` - ICDE 2024（International Conference on Data Engineering）是数据库与数据工程领域的国际顶级学术会议，被中国计算机学会（CCF）推荐为 A 类会议。该
 - [[entities/gaussml|gaussml]] `aliases: GaussML 系统, openGauss ML engine, GaussML` - GaussML 是内置于 [[entities/opengauss|openGauss]] 数据库的端到端数据库内机器学习系统，也是发表于 [[entities/icde-2024|ICDE 2024
-- [[entities/galois|galois]] `aliases: Galois 框架, Galois Framework` - Galois 是一个专门针对大型语言模型（LLM）上 SQL 查询优化的逻辑与物理优化框架。它扩展了传统数据库的[[concepts/查询计划|查询计划]]生成方式，将[[concepts/语义操作|
+- [[entities/galois|galois]] `aliases: Galois 框架, Galois Framework` - - [[entities/andb|AnDB]]
 - [[entities/daft|daft]] `aliases: Daft` - Daft 是一个基于 [[entities/ray|Ray]] 的分布式 DataFrame 库，专为多模态数据处理（图像、文本、视频、三维点云等）而设计。它在 [[entities/cortex-a
 - [[entities/d-bot|d-bot]] `aliases: D-Bot 系统` - D-Bot 是一个利用[[concepts/大模型|大模型]]进行数据库诊断的系统，展示了 LLM 在数据库运维（AIOps）中的应用。它将数据库诊断知识、日志分析与 LLM 的推理能力相结合，辅助 
-- [[entities/cortex-aisql|cortex-aisql]] `aliases: Cortex AISQL, Snowflake Cortex AISQL` - Cortex AISQL 是 [[entities/snowflake|Snowflake]] 推出的生产级 SQL 引擎，原生集成 AI 算子，可直接在 SQL 查询中对非结构化数据执行语义操作。该
+- [[entities/cortex-aisql|cortex-aisql]] `aliases: Cortex AISQL, Snowflake Cortex AISQL` - - [[entities/snowflake|Snowflake]]
 - [[entities/cnn-数据集|cnn-数据集]] `aliases: CNN/Daily Mail 数据集, CNN-DailyMail, CNN` - CNN 数据集（常指 **CNN/Daily Mail** 新闻摘要数据集）是由 CNN 和 Daily Mail 新闻文章及其对应的人工摘要组成的基准数据集，广泛用于文本摘要与文档理解任务。在 [[
 - [[entities/cnn-dataset|cnn-dataset]] `aliases: CNN/Daily Mail dataset, CNN-DailyMail` - CNN dataset 是一个用于图像分类或语义匹配任务的数据集，可能指代广泛使用的 CNN/Daily Mail 摘要数据集，或在特定实验中构造的自定义数据集。在 [[entities/cortex
 - [[entities/apache-madlib|apache-madlib]] `aliases: MADlib` - Apache MADlib 是一个开源的数据库内机器学习库，通过用户定义函数（UDF）的形式在 PostgreSQL、Pivotal Greenplum 等 MPP 数据库中运行。它代表了传统 [[c
@@ -50,6 +100,44 @@
 
 ## 概念
 
+- [[concepts/sparsity|sparsity]] `aliases: 索引稀疏性, Prediction Table 稀疏, Prediction Table 稀疏性` - 在 [[entities/inferdb|InferDB]] 系统中，Sparsity（稀疏性）是指 **Prediction Table 中仅有极小比例的可能离散化 key 组合被训练数据实际填充，
+- [[concepts/structured-data|structured-data]] `aliases: 结构化数据, Structured Data` - 结构化数据（Structured Data）是指数据元素被组织成明确的模式（schema），通常以表格形式存在，每条记录由固定字段组成，字段类型可以是数值、类别、日期等。这类数据可高效地存储在关系型数
+- [[concepts/data-drift|data-drift]] `aliases: 数据漂移` - 数据漂移（Data drift）指机器学习模型部署后，生产环境中输入数据的统计分布相对于训练数据发生变化的自然现象。这种漂移会导致模型性能退化，因为模型所依赖的统计假设不再成立。在 InferDB 这
+- [[concepts/test-miss-rate|test-miss-rate]] `aliases: 测试未命中率, test miss rate` - Test-miss-rate 衡量在推理过程中，测试数据点经过离散化后所得到的 key 不在 [[concepts/prediction-table|Prediction Table]] 中的比例。该
+- [[concepts/fill-factor|fill-factor]] `aliases: 填充因子, Fill factor, FF` - Fill-factor（填充因子）是衡量[[concepts/prediction-table|Prediction Table]]中非空键数量与理论最大键数量比值的指标，表征离散化嵌入空间的占用率。
+- [[concepts/bin|bin]] `aliases: Bin, 分箱, 离散化区间` - Bin 是有监督离散化操作中将连续或类别特征的值域划分成的若干个互不相交的区间/集合。每个 bin 对应一个离散化后的类别标识，同一 bin 内的所有原始值被映射为相同 key。在 InferDB 中
+- [[concepts/inference-as-join|inference-as-join]] `aliases: 推理即 Join, Inference-as-Join` - Inference as Join 是 InferDB 系统提出的设计范式，将端到端的机器学习推理转化为标准关系数据库中的等值连接（equi-join）操作。测试数据经过有监督离散化映射到与 Pred
+- [[concepts/prefix-search-fallback|prefix-search-fallback]] `aliases: 前缀搜索回退` - Prefix Search Fallback 是 InferDB 中一种应对 Prediction Table 稀疏性的后备查询策略。当待预测数据点经离散化后形成的完整键（key）在 Predicti
+- [[concepts/greedy-feature-selection|greedy-feature-selection]] `aliases: 贪心特征选择` - Greedy Feature Selection 是 [[entities/inferdb|InferDB]] 中用于从离散化后的全部特征中选取预测能力最强子集的线性贪心启发式算法。该算法按 Info
+- [[concepts/supervised-discretization|supervised-discretization]] `aliases: 有监督离散化, Supervised Discretization` - 有监督离散化（Supervised Discretization）是一种将连续型（或基数过高的离散型）特征映射到有限个离散区间（bin）的特征工程方法。与无监督的等宽或等频分箱不同，它利用目标变量的信
+- [[concepts/information-value|information-value]] `aliases: IV, 信息值` - Information Value（IV，信息值）是一种在信用评分与风险建模中广泛应用的统计量，用于量化一个分类变量对二分类目标变量的整体预测能力。IV 通过比较变量每个分箱（bin）内正负样本的分布
+- [[concepts/prediction-table|prediction-table]] `aliases: 预测表, Prediction Table, PT` - Prediction Table（预测表）是 InferDB 系统中的核心数据结构，用于存储有监督离散化特征键与聚合模型预测值之间的映射。构建时，训练数据的每个数据点通过选定的离散化特征子集映射为一个
+- [[concepts/llm-overconfidence|llm-overconfidence]] `aliases: LLM过度自信, Overconfidence in LLM confidence estimation, LLM overconfidence` - LLM overconfidence（大型语言模型过度自信）是指大型语言模型对其生成结果所估计的置信度系统性地高于实际正确率的现象，即置信度估计与真实性能之间出现显著偏差。在[[entities/ga
+- [[concepts/avg-score|avg-score]] `aliases: Average Score, AVG Score metric` - AVG‑Score（Average Score）是 Galois 论文中提出的一个综合评价指标，用于量化大语言模型在 SQL 查询下生成结构化数据的整体质量。它定义为三个子指标的无加权算术平均：F1‑
+- [[concepts/model-provided-confidence-mc|model-provided-confidence-mc]] `aliases: MC, MC context knowledge` - Model-provided confidence（MC）是 Galois 系统中区别于模型内知识（IK）的一种知识获取场景。在该场景下，大语言模型（LLM）**不直接持有回答查询所需的全部知识**，
+- [[concepts/internal-knowledge-ik|internal-knowledge-ik]] `aliases: IK 场景, 内部知识访问, 内部知识场景` - Internal knowledge (IK) 是 [[entities/galois|Galois]] 实验中定义的一种知识获取场景。该场景下，问题所需的结构化数据完全存在于 LLM 的预训练参数中
+- [[concepts/iterative-data-extraction-from-llms|iterative-data-extraction-from-llms]] `aliases: 迭代式LLM数据提取, Iterative LLM Extraction, Iterative data extraction from LLMs` - Iterative data extraction from LLMs 是一种通过多次大规模语言模型（LLM）调用逐步累积、精炼结构化信息的方法。在 [[entities/galois|Galois]
+- [[concepts/popularity-bias-in-llm-knowledge-extraction|popularity-bias-in-llm-knowledge-extraction]] `aliases: 实体频率偏差, entity popularity bias, 流行度偏差` - 一种系统性的偏差现象：大型语言模型（LLM）在提取参数化知识时，其输出质量和完整性高度依赖于目标实体在训练语料中的出现频率。高频实体（如美国总统）的知识提取得分（AVG-Score 0.862）显著高
+- [[concepts/selective-attribute-retrieval|selective-attribute-retrieval]] `aliases: Selective Attribute Extraction, 选择性属性检索` - 选择性属性检索（Selective Attribute Retrieval）是 [[entities/galois|Galois]] 语义查询系统中采用的一种 **token 消耗优化技术**。其核心
+- [[concepts/llm-as-storage|llm-as-storage]] `aliases: LLM-as-Storage, LLM 作为存储层` - “LLM as Storage”是 Galois 论文提出的核心设计哲学，它将大语言模型（LLM）视为一种**存储系统**，模型的内部参数化知识被类比为数据库表中的数据。在这一视角下，系统通过 SQL
+- [[concepts/confidence-based-optimization-for-llm-queries|confidence-based-optimization-for-llm-queries]] `aliases: confidence-driven optimization, LLM confidence estimation in queries, Physical optimization for LLM queries, Logical optimization for LLM queries` - Confidence-based optimization for LLM queries 是 Galois 系统提出的一种查询优化方法。它利用大语言模型（LLM）自身的分类能力，为 SQL 风格查询
+- [[concepts/table-scan-physical-operator|table-scan-physical-operator]] `aliases: Table-Scan, Table Scan, table-scan (physical operator)` - Table‑Scan 是 [[entities/galois|Galois]] 系统中实现的一种物理扫描算子，用于在结构化数据上执行 **LLM 驱动的低置信度全表检索**。它通过迭代式提示逐行获取所
+- [[concepts/key-scan-physical-operator|key-scan-physical-operator]] `aliases: KeyScan, Key Scan Operator` - Key-Scan 是 [[entities/galois|Galois]] 查询系统中定义的一种高精度物理算子，用于结构化数据的查询执行。它采用**两步分解**策略：
+- [[concepts/llmscan-operator|llmscan-operator]] `aliases: LLMScan logical operator, LLMScan 逻辑算子, LLMScan, Filter-LLMScan` - LLMScan 是 [[entities/galois|Galois]] 系统中定义的核心逻辑算子，负责与大语言模型（LLM）交互以获取结构化数据。该算子支持三种条件下推策略：无下推、单条件下推和全条
+- [[concepts/reranking|reranking]] `aliases: Reranking, Re-ranking, 重排序` - 重排序是 DiskANN 查询管线中的最后一个阶段，其核心作用是对 beam search 返回的 Top-K 候选向量，使用从 SSD 按需读取的全精度向量重新计算精确距离（如 L2 或余弦距离），
+- [[concepts/nsg|nsg]] `aliases: Navigating Spread-out Graph, NSG 图索引` - NSG（Navigating Spread-out Graph）是一种基于单调相对邻域图（Monotonic Relative Neighborhood Graph, MRNG）的近似最近邻搜索图索引
+- [[concepts/monotonic-relative-neighborhood-graph|monotonic-relative-neighborhood-graph]] `aliases: MRNG, 单调相对邻域图, Monotonic Relative Neighborhood Graph` - 单调相对邻域图（Monotonic Relative Neighborhood Graph, MRNG）是一种用于近似最近邻搜索的单调性图结构，它是NSG索引方法的核心基础。MRNG通过保证搜索路径上
+- [[concepts/hnsw|hnsw]] `aliases: Hierarchical Navigable Small World, HNSW 算法` - HNSW（Hierarchical Navigable Small World）是一种基于多层可导航小世界图的近似最近邻搜索（ANNS）算法，由 Yu. A. Malkov 和 D. A. Yashu
+- [[concepts/small-world-graph|small-world-graph]] `aliases: 小世界图, small-world network` - Small‑world graph（小世界图）是一类同时具有**高聚类系数**（high clustering coefficient）和**短平均路径长度**（short average path 
+- [[concepts/asymmetric-distance-computation|asymmetric-distance-computation]] `aliases: ADC, ADC distance` - Asymmetric distance computation (ADC) 是 Product Quantization (PQ) 压缩场景下，计算未压缩查询向量与压缩数据库中码本距离的标准方法。与对
+- [[concepts/long-range-edges|long-range-edges]] `aliases: 长边, highway edges` - Long-range edges（长边）是指图索引中连接两个在向量空间中距离较远的节点的边。它们是 small-world 图的核心结构，与局部短边共同作用，使图具有小直径和高导航效率。在 Vaman
+- [[concepts/greedysearch|greedysearch]] `aliases: Greedy Search, 贪婪搜索, 贪心搜索` - GreedySearch（贪心搜索）是一种用于近似最近邻（ANN）图遍历的基础算法：从给定的起始节点出发，每一步都选择当前节点的邻居中距离查询点最近的节点，直至无法找到更近的节点为止。该算法是 Vam
+- [[concepts/two-pass-index-construction|two-pass-index-construction]] `aliases: 两阶段索引构建, 增量索引构建, incremental index building` - Two-pass index construction（两阶段索引构建）是 DiskANN 针对十亿级向量数据集提出的一种高效索引构建方法。其核心思想是将全量数据的 Vamana 图构建拆分为两个阶段
+- [[concepts/ssd-access-optimization|ssd-access-optimization]] `aliases: SSD 访问优化, DFS/BFS layout for SSD` - SSD access optimization（SSD 访问优化）是指在基于 SSD 的近似最近邻（ANN）索引构建过程中，通过有意识地重排向量数据在磁盘上的物理存储布局，将搜索阶段的读取模式从随机 
+- [[concepts/two-tier-storage-architecture|two-tier-storage-architecture]] `aliases: RAM + SSD 两层存储, SSD-aware storage hierarchy, Two-tier storage` - Two-tier storage architecture 是指一种将向量搜索所需数据按照访问延迟和精度要求解耦为两层的存储分层设计。该架构由 [[entities/diskann|DiskANN]]
+- [[concepts/product-quantization|product-quantization]] `aliases: PQ, PQ compression, product quantization` - Product Quantization (PQ) 是一种向量压缩方法，将原始高维向量空间分解为多个低维子空间的笛卡尔积，然后在每个子空间内独立进行向量量化。具体而言，将 d 维向量分割成 M 个互不
+- [[concepts/vamana-graph|vamana-graph]] `aliases: Vamana algorithm, Vamana graph index` - Vamana graph 是由 DiskANN 提出的一种用于近似最近邻（ANN）搜索的图索引构建算法。其核心思路是对数据集中的每个节点，先通过贪心搜索（greedy search）找到一批候选邻居，
+- [[concepts/α-pruning|α-pruning]] `aliases: alpha-pruning, relaxed pruning strategy` - α-pruning 是 Vamana 图构建算法中的关键剪枝策略。在 greedy search 找到候选邻居后，将候选按与当前节点的距离排序，并逐个加入邻接表。与传统严格最近邻剪枝不同，α-prun
 - [[concepts/selective-reconstruction|selective-reconstruction]] `aliases: 选择性 KV cache 重建, Selective KV Cache Reconstruction` - Selective Reconstruction 是 [[concepts/cache-persistence|Cache Persistence]] 中与 [[concepts/prefix-sha
 - [[concepts/cache-persistence|cache-persistence]] `aliases: 缓存持久化` - Cache Persistence 是 LLM 推理 Memory Management 层中的一类方法，关注如何在**不同的推理请求之间保留、复用 KV cache**，从而减少重复计算，提升整体吞
 - [[concepts/eviction-&-offloading|eviction-&-offloading]] `aliases: KV cache 驱逐与卸载, Eviction and Offloading, KV Cache Eviction and Offloading` - Eviction & Offloading 是 LLM 推理系统的 Memory Management 层中，用于管理 KV cache 容量的两类互补策略。Eviction（驱逐）在 GPU 显存不
@@ -70,7 +158,7 @@
 - [[concepts/kv-cache|kv-cache]] `aliases: 键值缓存, Key-Value Cache, KV cache` - Transformer 解码器在自回归生成过程中，缓存先前时间步计算出的 **Key** 和 **Value** 矩阵，从而避免对历史 token 重复计算的优化技术。它是大语言模型（LLM）推理阶段
 - [[concepts/graph-of-thoughts|graph-of-thoughts]] `aliases: 思维图, GoT` - Graph-of-Thoughts (GoT) 是一种提升大型语言模型 (LLM) 复杂推理能力的**提示策略**。它将推理过程建模为**有向无环图 (DAG)**，其中每个节点代表一个中间“思维”步
 - [[concepts/self-consistency|self-consistency]] `aliases: 自一致性, Self-Consistency, SC` - Self-Consistency（自一致性）是一种用于提升大型语言模型（LLM）输出可靠性的策略。其核心思想是对同一输入问题进行多次采样，生成多条不同的推理路径或答案，然后通过多数投票（或其他共识机制
-- [[concepts/beam-search|beam-search]] `aliases: 束搜索, Beam Search 算法` - Beam Search（束搜索）是一种启发式搜索算法，广泛应用于序列生成任务。它在每一步保持固定数量（beam width）的候选序列，按得分扩展并保留最优的部分，从而在穷举搜索的高计算成本与贪心解码
+- [[concepts/beam-search|beam-search]] `aliases: 束搜索, Beam Search 算法` - - [[concepts/graph-of-thoughts|Graph-of-Thoughts]]
 - [[concepts/flashdecoding|flashdecoding]] `aliases: Flash-Decoding, Flash Decoding` - FlashDecoding 是一种针对 Transformer 模型解码阶段优化的注意力计算 CUDA kernel，旨在通过分段并行处理键值（KV）对长序列进行高效注意力计算，显著降低延迟。它是对 
 - [[concepts/flashattention|flashattention]] `aliases: Flash Attention, FA` - FlashAttention 是一种 IO‑aware 的精确注意力（exact attention）计算算法，通过分块（tiling）和重计算（recomputation）技术，最小化高带宽内存（H
 - [[concepts/ring-attention|ring-attention]] `aliases: Ring Attention, 环形注意力, 环形注意力机制` - Ring Attention 是一种分布式注意力计算方法，通过将长序列切割成多个块（chunk），并在多个 GPU 或计算节点之间以逻辑环（ring）的方式传递 Key 和 Value 块，从而将注意
@@ -79,15 +167,15 @@
 - [[concepts/continuous-batching|continuous-batching]] `aliases: 动态批处理, Continuous Batching` - Continuous batching 是一种 LLM 推理服务调度方法，允许在模型处理一个批次的过程中动态地添加新的请求或移除已完成的请求，突破传统静态批处理一旦开始便不可变更的限制。该技术通过最大
 - [[concepts/非结构化数据|非结构化数据]] `aliases: 非结构化数据, unstructured data` - 非结构化数据指缺乏预定义数据模型或结构化模式的信息，典型形式包括自然语言文本、图像、音频等。传统关系型数据库和 SQL 引擎无法对其执行[[concepts/语义操作|语义操作]]，只能处理表中的结构
 - [[concepts/语义操作|语义操作]] `aliases: 语义操作 (semantic operations), Semantic operations` - 语义操作（Semantic operations）是指对非结构化数据（文本、图像、音频等）进行语义理解与转换的一类 AI 操作，包括向量嵌入、文本生成、语义分类、过滤和聚合等。它们构成了 Cortex
-- [[concepts/查询计划|查询计划]] `aliases: 执行计划, Query Plan` - - [[concepts/ai-aware-query-optimization|AI 感知查询优化]]
+- [[concepts/查询计划|查询计划]] `aliases: 执行计划, Query Plan` - - [[entities/cortex-aisql|Cortex AISQL]]
 - [[concepts/数据预取|数据预取]] `aliases: 数据预取, Data Prefetching` - 数据预取是 [[entities/gaussml|GaussML]] 中配合 [[concepts/simd-加速|SIMD 加速]] 使用的一种底层优化技术，通过在数据被实际使用之前将其预先加载到 
 - [[concepts/数据库触发|数据库触发]] `aliases: Database Triggered Execution, 数据库触发执行` - - [[concepts/外部执行链路|外部执行链路]]
 - [[concepts/批量构造策略|批量构造策略]] `aliases: Batch 构造策略, Batch construction strategy` - 批量构造策略指在 AI 推理任务中，如何将输入行组织为批次（batch）、定义分区粒度以及调度任务/actor 的一整套设计方法与优化准则。其核心目标是显式控制批处理大小、并行度与执行顺序，从而在外部
 - [[concepts/小模型|小模型]] `aliases: proxy model, 轻量级模型` - 小模型（proxy model）是指在 Cortex AISQL 的[[concepts/adaptive-model-cascading|自适应模型级联]]架构中充当代理的轻量级语言模型。它负责处理
 - [[concepts/大模型|大模型]] `aliases: oracle model, 重量级模型` - 大模型（oracle model）是[[concepts/adaptive-model-cascading|自适应模型级联]]架构中的重量级推理组件，承担最终质量保证的角色。它仅在轻量级[[conce
-- [[concepts/外部执行链路|外部执行链路]] `aliases: External execution chain, 数据库触发+外部执行+写回模式` - - [[concepts/ai-aware-query-optimization|AI-aware query optimization]]
+- [[concepts/外部执行链路|外部执行链路]] `aliases: External execution chain, 数据库触发+外部执行+写回模式` - - [[entities/cortex-aisql|Cortex AISQL]]
 - [[concepts/双阈值路由策略|双阈值路由策略]] `aliases: Dual-Threshold Routing` - 双阈值路由策略是[[concepts/adaptive-model-cascading|自适应模型级联]]的核心决策机制，通过设置两个置信度阈值（高阈值和低阈值）将小模型的输出置信度划分为三个区间：高
-- [[concepts/原生-sql-算子集成|原生-sql-算子集成]] `aliases: Native SQL Operator Integration, 原生机器学习算子, 原生SQL算子集成` - 原生 SQL 算子集成是 GaussML 等数据库内机器学习系统采用的核心设计方法。它将分类、回归、聚类等常用的机器学习算法直接实现为数据库查询引擎内部的一等公民算子，而非通过外部用户定义函数（UDF
+- [[concepts/原生-sql-算子集成|原生-sql-算子集成]] `aliases: Native SQL Operator Integration, 原生机器学习算子, 原生SQL算子集成` - - [[concepts/ai-aware-query-optimization|AI 感知查询优化]]
 - [[concepts/分布式并行训练|分布式并行训练]] `aliases: 分布式机器学习, 数据库内并行训练, Distributed Parallel Training` - 分布式并行训练是 GaussML 利用 openGauss 数据库自身并行处理能力，将机器学习模型的训练与推理任务自动拆分到多个数据库节点上协同执行的一种方法。它避免了传统 ML 框架中对数据手动切片
 - [[concepts/写回瓶颈|写回瓶颈]] `aliases: 结果持久化瓶颈, Write-back bottleneck` - 写回瓶颈（Write-back bottleneck）是指在机器学习与数据库交互的外部执行场景中，将 GPU 工作器或其他外部计算资源产生的结果高效地写回数据库存储时可能遇到的性能限制。该瓶颈主要出现
 - [[concepts/传统-ml|传统-ml]] `aliases: 传统机器学习, Classical ML` - 传统 ML（传统机器学习）指基于统计理论与数学模型的机器学习方法，覆盖分类、回归、聚类、降维等核心任务。其典型算法包括线性回归、决策树、支持向量机（SVM）、K‑Means、随机森林等，通常运行于 C
@@ -102,7 +190,7 @@
 - [[concepts/llm-inference-cost-model|llm-inference-cost-model]] `aliases: AI operator cost model, LLM cost function, 代价模型` - LLM inference cost model 是一个用于量化大语言模型推理成本的数学模型，核心公式为：
 - [[concepts/importance-sampling-routing|importance-sampling-routing]] `aliases: Importance Sampling Routing, 基于重要性采样的路由, ISR, 重要性采样` - 重要性采样路由（Importance Sampling Routing）是一种用于自适应模型级联的动态样本调度方法。它利用重要性采样技术在运行时学习两个决策阈值，将每一条输入行实时划分到三个区域：**
 - [[concepts/gpu-模型服务|gpu-模型服务]] `aliases: GPU Model Serving, GPU推理服务` - GPU 模型服务是一种将训练好的深度学习模型（如大语言模型、embedding 模型）部署在配备 GPU 的服务器上，通过 API 对外提供实时或批量推理计算的方法。在本课题的外部执行架构中，数据库触
-- [[concepts/db4ai|db4ai]] `aliases: Database for AI, 库内AI` - DB4AI（Database for AI，或称“把模型拉进数据库”）是一种数据库系统的设计范式，其核心理念是将机器学习、深度学习等 AI 能力深度融入数据库内核，从而大幅减少数据在数据库与外部 AI
+- [[concepts/db4ai|db4ai]] `aliases: Database for AI, 库内AI` - - [[concepts/外部执行链路|外部执行链路]]
 - [[concepts/arrow-recordbatch|arrow-recordbatch]] `aliases: RecordBatch, Arrow 列式数据` - Arrow RecordBatch 是 Apache Arrow 项目定义的一种列式内存数据格式，由一组具有相同长度且满足特定模式（Schema）的数组组成。RecordBatch 能够在系统间实现零
 - [[concepts/ai_join|ai_join]] `aliases: AI 语义连接算子, semantic join operator` - AI_JOIN 是 [[entities/cortex-aisql|Cortex AISQL]] 中的一种 AI‑SQL 算子，用于基于语义相似性而不是精确值匹配来连接两个或多个表。它的典型用例是“找
 - [[concepts/ai_filter|ai_filter]] `aliases: AI 语义过滤算子, semantic filter, AI predicate, AI 谓词` - - [[concepts/ai-aware-query-optimization|AI 感知查询优化]]
@@ -117,7 +205,10 @@
 
 ## 来源
 
+- [[sources/inferdb_pvldb2024_424566|inferdb_pvldb2024_424566]] `aliases: InferDB 论文笔记, InferDB (PVLDB 2024) 精读, InferDB (PVLDB 2024)`
+- [[sources/galois_sigmod2025_c4af88|galois_sigmod2025_c4af88]] `aliases: Galois (SIGMOD 2025), Galois Logical and Physical Optimizations`
+- [[sources/diskann_neurips2019_009b0e|diskann_neurips2019_009b0e]] `aliases: DiskANN 精读笔记, DiskANN (NeurIPS 2019)`
 - [[sources/db_perspective_llm_pvldb2025_300968|db_perspective_llm_pvldb2025_300968]] `aliases: DB视角LLM推理系统 (PVLDB 2025), 数据库视角LLM推理系统教程, DB Perspective LLM Inference (PVLDB 2025)`
 - [[sources/readme_425fbb|readme_425fbb]] `aliases: 本地参考PDF子集, Local Reference PDFs`
-- [[sources/gaussml_icde2024_577060|gaussml_icde2024_577060]] `aliases: GaussML 精读笔记, GaussML ICDE 2024 路线对照分析`
+- [[sources/gaussml_icde2024_577060|gaussml_icde2024_577060]] `aliases: GaussML 论文精读笔记, GaussML (ICDE 2024) 深度阅读, GaussML (ICDE 2024)`
 - [[sources/cortex_aisql_sigmod2026_c18b08|cortex_aisql_sigmod2026_c18b08]] `aliases: Cortex AISQL 精读笔记, Cortex AISQL (SIGMOD 2026) 笔记, Cortex AISQL (SIGMOD 2026)`

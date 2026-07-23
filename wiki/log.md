@@ -62,3 +62,35 @@ Every ingest, lint run, and maintenance operation is recorded here automatically
 
 **更新页面**：[[sarathi-serve]], [[vllm]], [[清华大学]]
 
+
+
+## [2026-07-22 17:44] ingest | 精读笔记：DiskANN — Fast Accurate Billion-point Nearest Neighbor Search on a Single Node (NeurIPS 2019) · 784s · deepseek-v4-pro · 10.6KB
+
+**创建页面**：[[sources/diskann_neurips2019_009b0e.md]], [[entities/deep1b.md]], [[entities/sift1b.md]], [[entities/diskann.md]], [[entities/nmslib.md]], [[entities/faiss.md]], [[entities/sptag.md]], [[entities/milvus.md]], [[entities/wisckey.md]], [[entities/turbovecdb.md]], [[entities/microsoft-research-india.md]], [[entities/vbase.md]], [[entities/neurips-2019.md]], [[concepts/α-pruning.md]], [[entities/sift1m.md]], [[concepts/vamana-graph.md]], [[concepts/product-quantization.md]], [[concepts/two-tier-storage-architecture.md]], [[concepts/ssd-access-optimization.md]], [[concepts/two-pass-index-construction.md]], [[concepts/greedysearch.md]], [[concepts/long-range-edges.md]], [[concepts/asymmetric-distance-computation.md]], [[concepts/small-world-graph.md]], [[concepts/hnsw.md]], [[concepts/monotonic-relative-neighborhood-graph.md]], [[concepts/nsg.md]], [[concepts/beam-search.md]], [[concepts/reranking.md]]
+
+**更新页面**：[[beam-search]]
+
+
+
+## [2026-07-22 17:57] ingest | Galois — Logical and Physical Optimizations for SQL over LLMs (SIGMOD 2025) · 757s · deepseek-v4-pro · 6.9KB
+
+**创建页面**：[[sources/galois_sigmod2025_c4af88.md]], [[entities/eurecom.md]], [[entities/university-of-basilicata.md]], [[entities/galois.md]], [[entities/together-ai.md]], [[entities/gpt-4o-mini.md]], [[entities/llama-3-1-70b.md]], [[entities/sigmod-2025.md]], [[entities/palimpzest.md]], [[entities/geo-test.md]], [[entities/world-dataset.md]], [[entities/flight.md]], [[entities/scholar-dataset.md]], [[entities/presidents-dataset.md]], [[entities/premier-dataset.md]], [[entities/movies-dataset.md]], [[entities/tag.md]], [[entities/lotus.md]], [[entities/fortune-dataset.md]], [[concepts/llmscan-operator.md]], [[concepts/key-scan-physical-operator.md]], [[concepts/table-scan-physical-operator.md]], [[concepts/confidence-based-optimization-for-llm-queries.md]], [[concepts/llm-as-storage.md]], [[concepts/selective-attribute-retrieval.md]], [[concepts/popularity-bias-in-llm-knowledge-extraction.md]], [[concepts/iterative-data-extraction-from-llms.md]], [[concepts/internal-knowledge-ik.md]], [[concepts/db4ai.md]], [[concepts/model-provided-confidence-mc.md]], [[concepts/avg-score.md]], [[concepts/llm-overconfidence.md]]
+
+**更新页面**：[[galois]], [[db4ai]]
+
+
+
+## [2026-07-22 18:07] ingest | 精读笔记：GaussML (ICDE 2024) · 635s · deepseek-v4-pro · 4.4KB
+
+**创建页面**：[[sources/gaussml_icde2024_577060.md]], [[entities/apache-madlib.md]], [[entities/opengauss.md]], [[entities/gaussml.md]], [[entities/清华大学.md]], [[entities/icde-2024.md]], [[entities/华为.md]], [[entities/smart.md]], [[entities/cortex-aisql.md]], [[entities/galois.md]], [[concepts/ml-as-udf.md]], [[entities/ray.md]], [[entities/neurdb.md]], [[concepts/simd-加速.md]], [[concepts/原生-sql-算子集成.md]], [[concepts/ai-aware-query-optimization.md]], [[concepts/数据预取.md]], [[concepts/查询计划.md]], [[concepts/db4ai.md]], [[concepts/外部执行链路.md]]
+
+**更新页面**：[[gaussml]], [[opengauss]], [[apache-madlib]], [[icde-2024]], [[清华大学]], [[华为]], [[cortex-aisql]], [[smart]], [[galois]], [[neurdb]], [[ray]], [[ml-as-udf]], [[原生-sql-算子集成]], [[ai-aware-query-optimization]], [[simd-加速]], [[db4ai]], [[数据预取]], [[查询计划]], [[外部执行链路]]
+
+
+
+## [2026-07-22 18:27] ingest | InferDB: In-Database Machine Learning Inference Using Indexes (PVLDB 2024) · 1210s · deepseek-v4-pro · 11.3KB
+
+**创建页面**：[[sources/inferdb_pvldb2024_424566.md]], [[entities/ricardo-salazar-díaz.md]], [[entities/boris-glavic.md]], [[entities/inferdb.md]], [[entities/optbinning.md]], [[entities/hasso-plattner-institute.md]], [[entities/tilmann-rabl.md]], [[entities/digitsmnist.md]], [[entities/postgresml.md]], [[entities/nyc-rides.md]], [[entities/university-of-potsdam.md]], [[entities/university-of-illinois-chicago.md]], [[entities/scikit-learn.md]], [[entities/xgboost.md]], [[entities/lightgbm.md]], [[entities/postgresql.md]], [[entities/fraud.md]], [[entities/pollution.md]], [[entities/rice.md]], [[entities/hits.md]], [[entities/pvldb-2024.md]], [[concepts/prediction-table.md]], [[concepts/information-value.md]], [[concepts/supervised-discretization.md]], [[concepts/greedy-feature-selection.md]], [[concepts/prefix-search-fallback.md]], [[concepts/inference-as-join.md]], [[concepts/bin.md]], [[concepts/fill-factor.md]], [[concepts/test-miss-rate.md]], [[concepts/data-drift.md]], [[concepts/structured-data.md]], [[concepts/sparsity.md]]
+
+**更新页面**：
+

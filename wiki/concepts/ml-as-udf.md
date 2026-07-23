@@ -28,7 +28,7 @@ ML‑as‑UDF 是一种在数据库内部执行机器学习任务的传统方法
 - 早期的数据库内机器学习原型，如 [[entities/apache-madlib|Apache MADlib]] 将多种经典 ML 算法（逻辑回归、SVM 等）封装为 UDF，使用户能够在 PostgreSQL 等数据库中快速进行实验。
 - 简单的预测或评分任务，数据规模较小时可直接通过 UDF 调用模型，避免数据迁出数据库。
 - 作为对比基线，后续的原生 AI 系统（如 [[entities/gaussml|GaussML]]）正是为了突破 ML‑as‑UDF 在性能、优化和安全性上的瓶颈而设计。
-
+- GaussML 的原生算子方案相比 [[entities/apache-madlib|Apache MADlib]] 的 ML‑as‑UDF 方案，在典型工作负载上性能可提升 **2–6 倍**，为这一对比基线提供了量化依据。
 ## 相关概念
 - [[concepts/原生-sql-算子集成|原生 SQL 算子集成]]
 - [[concepts/ai-aware-query-optimization|AI-aware query optimization]]
@@ -46,3 +46,4 @@ ML‑as‑UDF 是一种在数据库内部执行机器学习任务的传统方法
 - "传统“ML-as-UDF”方法有两个核心缺陷：1. 安全风险：UDF 可能引入漏洞代码 2. 性能瓶颈：UDF 受限于 SQL 查询算子的数据访问与执行模式约束（无法利用 SIMD、无法做 ML 感知优化）" — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]
 - "GaussML 的方案：把 ML 算子做成数据库原生算子，而不是 UDF。" — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]
 - "不是 `SELECT my_udf(x)`，而是让优化器理解 ML 算子的语义和代价" — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]
+- "传统 ML-as-UDF 方法有安全风险（UDF 可能引入漏洞代码）和性能瓶颈（无法利用 SIMD、无法做 ML 感知优化）" — [[raw/papers/gaussml_icde2024|gaussml_icde2024]]
